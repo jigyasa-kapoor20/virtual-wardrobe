@@ -24,7 +24,7 @@ selectionSpeed = 10
 
 while True:
     success, img = cap.read()
-    img = detector.findPose(img)
+    img = detector.findPose(img, draw=False)
     # img = cv2.flip(img,1)
     lmList, bboxInfo = detector.findPosition(img, bboxWithHands=False, draw=False)
     if lmList:
